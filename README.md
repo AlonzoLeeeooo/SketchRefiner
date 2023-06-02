@@ -44,3 +44,16 @@ More results of face editing and object removal are illustrated in the following
 # License
 This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
 
+# Citation
+If you find our work is enlightening or the proposed dataset is useful to you, please cite our paper.
+```tex
+@misc{liu2023interactive,
+      title={Towards Interactive Image Inpainting via Sketch Refinement}, 
+      author={Chang Liu and Shunxin Xu and Jialun Peng and Kaidong Zhang and Dong Liu},
+      year={2023},
+      eprint={2306.00407},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
