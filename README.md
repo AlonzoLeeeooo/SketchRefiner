@@ -1,7 +1,7 @@
 # Towards Interactive Image Inpainting via Sketch Refinement
 The official code implementation of "Towards Interactive Image Inpainting via Sketch Refinement".
 
-[Paper] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [Test Protocol] / [Interactive Demo]
+[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [Test Protocol] / [Interactive Demo]
 
 # Overview
 ![tissor](github_materials/teasor.jpg)
