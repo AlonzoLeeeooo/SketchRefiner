@@ -13,12 +13,12 @@ One tough problem of image inpainting is to restore complex structures in the co
 </div>
 
 - Currently we are still working on collecting the codebase. We would open-source the codebase and the proposed dataset ASAP. Start the project to get notified!
-- [v] Official instructions of installation and usage of SketchRefiner.
-- [v] Testing code of SketchRefiner.
+- [x] Official instructions of installation and usage of SketchRefiner.
+- [x] Testing code of SketchRefiner.
 - [ ] The proposed sketch-based test protocol.
 - [ ] Online demo of SketchRefiner.
 - [ ] Pre-trained model weights.
-- [v] Training code of SketchRefiner.
+- [x] Training code of SketchRefiner.
 
 # Prerequisites
 For installing the environment, you could execute the following scripts:
