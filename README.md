@@ -13,18 +13,92 @@ One tough problem of image inpainting is to restore complex structures in the co
 </div>
 
 - Currently we are still working on collecting the codebase. We would open-source the codebase and the proposed dataset ASAP. Start the project to get notified!
-- [ ] Official instructions of installation and usage of SketchRefiner.
-- [ ] Testing code of SketchRefiner.
+- [v] Official instructions of installation and usage of SketchRefiner.
+- [v] Testing code of SketchRefiner.
 - [ ] The proposed sketch-based test protocol.
 - [ ] Online demo of SketchRefiner.
 - [ ] Pre-trained model weights.
-- [ ] Training code of SketchRefiner.
+- [v] Training code of SketchRefiner.
 
 # Prerequisites
-To be implemented.
+For installing the environment, you could execute the following scripts:
+```bash
+conda create -n sketchrefiner python=3.6
+conda activate sketchrefiner
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install opencv-python
+```
+
+For utilizing the HRF loss to train the model, please download the pre-trained models provided by [LaMa](https://github.com/advimman/lama). You could download the model by executing the following command lines:
+```bash
+mkdir -p ade20k/ade20k-resnet50dilated-ppm_deepsup/
+wget -P ade20k/ade20k-resnet50dilated-ppm_deepsup/ http://sceneparsing.csail.mit.edu/model/pytorch/ade20k-resnet50dilated-ppm_deepsup/encoder_epoch_20.pth
+```
+Note that the `ade20k` folder is placed at `SIN_src/models/ade20k`.
 
 # Usage
-To be implemented.
+## Training
+### 1. Train the Sketch Refinement Network (SRN)
+Before training the inpainting network of SketchRefiner, you need to first train the proposed Sketch Refinement Network (SRN). We demonstrate an example command line as follows:
+
+```bash
+# train the Registration Module (RM)
+python SRN_train.py
+      --images /path/to/images
+      --edges_prefix /path/to/edge
+      --output /path/to/output/dir
+      
+# train the Enhancement Module (EM)
+python SRN_train.py
+      --images /path/to/images/
+      --edges_prefix /path/to/edge/
+      --output /path/to/output/dir
+      --train_EM
+      --RM_checkpoint /path/to/model/weights/of/RM
+```
+
+If you need to evaluate the model during training, make sure you assign `val_interval > 0` and configure the paths of `images_val`, `masks_val`, `sketches_prefix_val`, `edges_prefix_val`.
+
+### 2. Train the Sketch-modulated Inpainting Network (SIN)
+After the SRN is trained, you could start training the SIN by executing:
+```bash
+python SIN_train.py
+      --config_path /path/to/config
+      --GPU_ids gpu_id
+```
+Make sure you modify corresponding lines of the configuration file with the paths of training data. We put an example configuration file in `SIN_src/configs/example.yml`.
+
+## Inference
+### 3. Refine the Input Sketches
+During inference, you need to first refine the input sketches and save them locally by running:
+```bash
+python SRN_test.py
+      --images /path/to/test/source/images
+      --masks /path/to/test/masks
+      --edge_prefix /path/to/detected/edges
+      --sketch_prefix /path/to/input/sketches
+      --output /path/to/output/dir
+      --RM_checkpoint /path/to/RM/checkpoint
+      --EM_checkpoint /path/to/EM/checkpoint
+```
+The refined sketches would be saved at the assigned `output` path.
+
+### 4. Inpaint the Corrupted Images with Refined Sketches
+Now you could inpaint the corrupted images with the refined sketches from SRN, by running:
+```bash
+python SIN_test.py
+      --config_path /path/to/config/path
+      --GPU_ids gpu_id
+      --images /path/to/source/images
+      --masks /path/to/masks
+      --edges /path/to/detected/edges
+      --sketches /path/to/input/sketches
+      --refined_sketches /path/to/refined/sketches
+      --output /path/to/output/dir/
+      --checkpoint /path/to/model/weights/of/SIM
+      --num_samples maximum_samples
+```
+Edges are detected using bdcn, you could refer to their code in [here](https://github.com/pkuCactus/BDCN).
 
 # Qualitative Comparisons
 Qualitative comparison on CelebA-HQ dataset.
