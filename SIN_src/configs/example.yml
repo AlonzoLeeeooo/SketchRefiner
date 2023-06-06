@@ -1,0 +1,78 @@
+SEED: 1            # random seed
+No_Bar: False        # Turn off the progressive bar
+
+size: 256
+str_size: 256
+round: 64
+fix_256: True
+
+TRAIN_FLIST: "/txt/path/of/images"
+SKETCH_PATH: "/txt/path/of/images"
+OUTPUT_DIR: "/output/path"
+
+VAL_FLIST: "/val/path/of/images"
+VAL_MASK_PATH: "/val/path/of/masks"
+VAL_SKETCH_PATH: "/val/path/of/sketches"
+
+BATCH_SIZE: 25                 # input batch size for training
+INPUT_SIZE: 256               # input image size for training 0 for original size
+MAX_ITERS: 800001                # maximum number of iterations to train the model
+
+SAVE_INTERVAL: 10000          # interval of saving checkpoints (0: never)
+SAMPLE_INTERVAL: 10000       # interval of saving training samples (0: never)
+SAMPLE_SIZE: 1               # number of samples
+EVAL_INTERVAL: 0              # interval of validation (0: never)
+LOG_INTERVAL: 1000            # interval of logging (0: never)
+
+run_title: ''
+
+training_model:
+  kind: default
+losses:
+  l1:
+    weight_missing: 0
+    weight_known: 10
+  perceptual:
+    weight: 0
+  adversarial:
+    weight: 10
+    gp_coef: 0.001
+    mask_as_fake_target: true
+    allow_scale_mask: true
+  feature_matching:
+    weight: 100
+  resnet_pl:
+    weight: 30
+    weights_path: '/path/to/ade20k/pretrained/perceptual/loss/model/of/LaMa'
+optimizers:
+  warmup_steps: 2000
+  generator:
+    kind: adam
+    lr: 3.0e-4
+  discriminator:
+    kind: adam
+    lr: 1.0e-4
+  decay_steps: 400000
+  decay_rate: 0.5
+
+generator:
+  input_nc: 4
+  output_nc: 3
+  ngf: 64
+  n_downsampling: 3
+  n_blocks: 9
+  add_out_act: sigmoid
+  init_conv_kwargs:
+    ratio_gin: 0
+    ratio_gout: 0
+    enable_lfu: false
+  downsample_conv_kwargs:
+    ratio_gin: 0
+    ratio_gout: 0
+    enable_lfu: false
+  resnet_conv_kwargs:
+    ratio_gin: 0.75
+    ratio_gout: 0.75
+    enable_lfu: false
+discriminator:
+  input_nc: 3
