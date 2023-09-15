@@ -1,19 +1,19 @@
 # Towards Interactive Image Inpainting via Sketch Refinement
 The official code implementation of "Towards Interactive Image Inpainting via Sketch Refinement".
 
-[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [Test Protocol] / [[Model Weights]](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre) / [Interactive Demo]
+[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [[Test Protocol](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw)] / [[Model Weights](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre)] / [Interactive Demo]
 
 # Overview
 ![tissor](github_materials/teasor.jpg)
 One tough problem of image inpainting is to restore complex structures in the corrupted regions. It motivates interactive image inpainting which leverages additional hints, e.g., sketches, to assist the inpainting process. Sketch is simple and intuitive to end users, but meanwhile has free forms with much randomness. Such randomness may confuse the inpainting models, and incur severe artifacts in completed images. To address this problem, we propose a two-stage image inpainting method termed SketchRefiner. In the first stage, we propose using a cross-correlation loss function to robustly calibrate and refine the user-provided sketches in a coarse-to-fine fashion. In the second stage, we learn to extract features from the abstracted sketches in a latent space and modulate the inpainting process. We also propose an algorithm to simulate real sketches automatically and build a test protocol to evaluate different methods under real applications. Experimental results on public datasets demonstrate that SketchRefiner effectively utilizes sketch information and eliminates the artifacts due to the free-form sketches. Our method consistently outperforms state-of-the-art baselines both qualitatively and quantitatively, meanwhile revealing great potential in real-world applications.
 
 # To-Do Lists
-- [x] Official instructions of installation and usage of SketchRefiner.
-- [x] Testing code of SketchRefiner.
-- [ ] The proposed sketch-based test protocol.
 - [ ] Online demo of SketchRefiner.
-- [x] Pre-trained model weights.
+- [x] Official instructions of installation and usage of SketchRefiner.
 - [x] Training code of SketchRefiner.
+- [x] Testing code of SketchRefiner.
+- [x] The proposed sketch-based test protocol.
+- [x] Pre-trained model weights.
 
 # Prerequisites
 For installing the environment, you could execute the following scripts:
@@ -98,20 +98,26 @@ Edges are detected using bdcn, you could refer to their code in [here](https://g
 ## Pre-trained Model Weights
 We release the pre-trained model weights of SketchRefiner on CelebA-HQ, Places2, and ImageNet, which can be referred to in [here](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre) (password: skre).
 
-# Qualitative Comparisons
-Qualitative comparison on CelebA-HQ dataset.
-![celebahq](github_materials/celebahq.jpg)
+## Real-World Test Protocol
+We release the curated real-world test protocol, which currently consists of 26 face images and 60 natural images with manually annotated masks and sketches. Note that the current released version might be further revised until our paper is finally accepted. You may download the test protocol in [here](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw) (password: rwtp).
 
-Qualitative comparison on Places2 dataset.
-![places](github_materials/places.jpg)
-
-# Sketch-Based Test Protocol
-We propose a sketch-based test protocol to promote further researches upon the studied task. The masks and sketches are manually annotated on iPad with an apple pencil.
+We provide some examples of the test protocol in the following figure.
 ![realworld](github_materials/realworld.jpg)
 
-# More Results
-More results of face editing and object removal are illustrated in the following figure.
+
+# Qualitative Comparisons
+We demonstrate the qualitative comparisons upon face and natural images in the following figures.
+<details><summary>Face Images</summary>
+![celebahq](github_materials/celebahq.jpg)
+</details>
+
+<details><summary>Natural Images</summary>
+![places](github_materials/places.jpg)
+</details>
+
+<details><summary>More Results</summary>
 ![more_results](github_materials/more_results.jpg)
+</details>
 
 # License
 This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
