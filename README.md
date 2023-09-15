@@ -1,23 +1,18 @@
 # Towards Interactive Image Inpainting via Sketch Refinement
 The official code implementation of "Towards Interactive Image Inpainting via Sketch Refinement".
 
-[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [Test Protocol] / [Interactive Demo]
+[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [Test Protocol] / [[Model Weights]](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre) / [Interactive Demo]
 
 # Overview
 ![tissor](github_materials/teasor.jpg)
 One tough problem of image inpainting is to restore complex structures in the corrupted regions. It motivates interactive image inpainting which leverages additional hints, e.g., sketches, to assist the inpainting process. Sketch is simple and intuitive to end users, but meanwhile has free forms with much randomness. Such randomness may confuse the inpainting models, and incur severe artifacts in completed images. To address this problem, we propose a two-stage image inpainting method termed SketchRefiner. In the first stage, we propose using a cross-correlation loss function to robustly calibrate and refine the user-provided sketches in a coarse-to-fine fashion. In the second stage, we learn to extract features from the abstracted sketches in a latent space and modulate the inpainting process. We also propose an algorithm to simulate real sketches automatically and build a test protocol to evaluate different methods under real applications. Experimental results on public datasets demonstrate that SketchRefiner effectively utilizes sketch information and eliminates the artifacts due to the free-form sketches. Our method consistently outperforms state-of-the-art baselines both qualitatively and quantitatively, meanwhile revealing great potential in real-world applications.
 
 # To-Do Lists
-<div align="center">
-<img src="github_materials/star.jpg">
-</div>
-
-- Currently we are still working on collecting the codebase. We would open-source the codebase and the proposed dataset ASAP. Start the project to get notified!
 - [x] Official instructions of installation and usage of SketchRefiner.
 - [x] Testing code of SketchRefiner.
 - [ ] The proposed sketch-based test protocol.
 - [ ] Online demo of SketchRefiner.
-- [ ] Pre-trained model weights.
+- [x] Pre-trained model weights.
 - [x] Training code of SketchRefiner.
 
 # Prerequisites
@@ -99,6 +94,9 @@ python SIN_test.py
       --num_samples maximum_samples
 ```
 Edges are detected using bdcn, you could refer to their code in [here](https://github.com/pkuCactus/BDCN).
+
+## Pre-trained Model Weights
+We release the pre-trained model weights of SketchRefiner on CelebA-HQ, Places2, and ImageNet, which can be referred to in [here](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre) (password: skre).
 
 # Qualitative Comparisons
 Qualitative comparison on CelebA-HQ dataset.
