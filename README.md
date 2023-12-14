@@ -1,7 +1,20 @@
-# Towards Interactive Image Inpainting via Sketch Refinement
+****# Towards Interactive Image Inpainting via Sketch Refinement
 The official code implementation of "Towards Interactive Image Inpainting via Sketch Refinement".
 
 [[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [[Test Protocol](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw)] / [[Model Weights](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre)] / [Interactive Demo]
+
+# Citation
+If you find our work is enlightening or the proposed dataset is useful to you, please cite our paper.
+```tex
+@misc{liu2023interactive,
+      title={Towards Interactive Image Inpainting via Sketch Refinement}, 
+      author={Chang Liu and Shunxin Xu and Jialun Peng and Kaidong Zhang and Dong Liu},
+      year={2023},
+      eprint={2306.00407},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 
 # Overview
 ![tissor](github_materials/teasor.jpg)
@@ -32,6 +45,19 @@ wget -P ade20k/ade20k-resnet50dilated-ppm_deepsup/ http://sceneparsing.csail.mit
 Note that the `ade20k` folder is placed at `SIN_src/models/ade20k`.
 
 # Usage
+## Data Pre-processing
+Before you train all the networks, you need to first prepare all the data following the procedures as follows:
+1. Download [ImageNet](https://www.image-net.org/), [CelebA-HQ](https://github.com/tkarras/progressive_growing_of_gans), and [Places2](http://places2.csail.mit.edu/download.html) datasets. Suppose that these data is downloaded at `datasets/dataset_name`.
+2. Use the edge detector [BDCN](https://github.com/pkuCactus/BDCN) to extract edge map from the ground truth images in `datasets`. Suppose that the resulting edge maps are placed at `datasets/dataset_name/edges`.
+3. Run `scripts/make_deform_sketch.py` to generate the deformed sketches for training. We offer an example command line as follows:
+```bash
+# generate deformed sketches from detected edge maps
+python scripts/make_deform_sketch.py
+      --edge datasets/dataset_name/edges
+      --output datasets/dataset_name/sketches
+```
+You may adjust `--grid_size`, `--filter_size`, and `--max_move` to control the magnitude of warping the edge maps. And you can select the number of generated sketches by adjusting `--num_samples`.
+
 ## Training
 ### 1. Train the Sketch Refinement Network (SRN)
 Before training the inpainting network of SketchRefiner, you need to first train the proposed Sketch Refinement Network (SRN). We demonstrate an example command line as follows:
@@ -121,19 +147,6 @@ We demonstrate the qualitative comparisons upon face and natural images in the f
 
 # License
 This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
-
-# Citation
-If you find our work is enlightening or the proposed dataset is useful to you, please cite our paper.
-```tex
-@misc{liu2023interactive,
-      title={Towards Interactive Image Inpainting via Sketch Refinement}, 
-      author={Chang Liu and Shunxin Xu and Jialun Peng and Kaidong Zhang and Dong Liu},
-      year={2023},
-      eprint={2306.00407},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
 
 # Acknowledgements
 This codebase is heavily modified from [ZITS](https://github.com/DQiaole/ZITS_inpainting). Thanks for their great implementaion!
