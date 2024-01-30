@@ -130,22 +130,31 @@ We release the pre-trained model weights of SketchRefiner on CelebA-HQ, Places2,
 ## Real-World Test Protocol
 We release the curated real-world test protocol, which currently consists of 26 face images and 60 natural images with manually annotated masks and sketches. Note that the current released version might be further revised until our paper is finally accepted. You may download the test protocol in [here](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw) (password: rwtp).
 
-We provide some examples of the test protocol in the following figure.
+We provide some examples of the test protocol in the following figure. <details>
+<summary>Examples of Real-World Test Protocol</summary>
+
 ![realworld](github_materials/realworld.jpg)
 
+</details>
 
 # Qualitative Comparisons
-We demonstrate the qualitative comparisons upon face and natural images in the following figures.
+We demonstrate the qualitative comparisons upon face and natural images in the following figures. 
 <details><summary>Face Images</summary>
+
 ![celebahq](github_materials/celebahq.jpg)
+
 </details>
 
 <details><summary>Natural Images</summary>
+
 ![places](github_materials/places.jpg)
+
 </details>
 
 <details><summary>More Results</summary>
+
 ![more_results](github_materials/more_results.jpg)
+
 </details>
 
 # License
