@@ -2,7 +2,8 @@
   <h1 align="center">Towards Interactive Image Inpainting via Sketch Refinement</h1>
 The official code implementation of "Towards Interactive Image Inpainting via Sketch Refinement".
 
-[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [[Test Protocol](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw)] (password: rwtp) / [[Model Weights](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre)] / [Interactive Demo]
+[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [[Test Protocol](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw)] / [[Model Weights](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre)] / [Interactive Demo]
+*(The password to download the real-world test protocol: rwtp)*
 
 # Citation
 If you find our work is enlightening or the proposed dataset is useful to you, please cite our paper.
@@ -23,7 +24,7 @@ One tough problem of image inpainting is to restore complex structures in the co
 
 # To-Do Lists
 - [ ] Online demo of SketchRefiner.
-- [x] Official instructions of installation and usage of SketchRefiner.
+- [x] Official instructions for installation and usage of SketchRefiner.
 - [x] Training code of SketchRefiner.
 - [x] Testing code of SketchRefiner.
 - [x] The proposed sketch-based test protocol.
