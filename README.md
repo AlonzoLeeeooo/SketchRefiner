@@ -3,6 +3,7 @@
 The official code implementation of "Towards Interactive Image Inpainting via Sketch Refinement".
 
 [[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [[Test Protocol](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw)] / [[Model Weights](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre)] / [Interactive Demo]
+
 *(The password to download the real-world test protocol: rwtp)*
 
 # Citation
