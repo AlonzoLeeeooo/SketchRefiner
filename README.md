@@ -163,3 +163,11 @@ This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
 # Acknowledgements
 This codebase is heavily modified from [ZITS](https://github.com/DQiaole/ZITS_inpainting). Thanks for their great implementaion!
 
+# Stars and Forked
+<div align=center>
+[![Stargazers repo roster for @AlonzoLeeeooo/LCDG](https://reporoster.com/stars/dark/AlonzoLeeeooo/LCDG)](https://github.com/AlonzoLeeeooo/LCDG/stargazers)
+</div>
+
+<div align=center>
+[![Forkers repo roster for @AlonzoLeeeooo/LCDG](https://reporoster.com/forks/dark/AlonzoLeeeooo/LCDG)](https://github.com/AlonzoLeeeooo/LCDG/network/members)
+</div>
