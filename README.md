@@ -164,6 +164,6 @@ This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
 This codebase is heavily modified from [ZITS](https://github.com/DQiaole/ZITS_inpainting). Thanks for their great implementaion!
 
 # Stars and Forked
-[![Stargazers repo roster for @AlonzoLeeeooo/LCDG](https://reporoster.com/stars/dark/AlonzoLeeeooo/LCDG)](https://github.com/AlonzoLeeeooo/LCDG/stargazers)
+[![Stargazers repo roster for @AlonzoLeeeooo/SketchRefiner](https://reporoster.com/stars/dark/AlonzoLeeeooo/SketchRefiner)](https://github.com/AlonzoLeeeooo/SketchRefiner/stargazers)
 
-[![Forkers repo roster for @AlonzoLeeeooo/LCDG](https://reporoster.com/forks/dark/AlonzoLeeeooo/LCDG)](https://github.com/AlonzoLeeeooo/LCDG/network/members)
+[![Forkers repo roster for @AlonzoLeeeooo/SketchRefiner](https://reporoster.com/forks/dark/AlonzoLeeeooo/SketchRefiner)](https://github.com/AlonzoLeeeooo/SketchRefiner/network/members)
