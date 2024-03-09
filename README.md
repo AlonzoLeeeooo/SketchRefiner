@@ -163,7 +163,12 @@ This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
 # Acknowledgements
 This codebase is heavily modified from [ZITS](https://github.com/DQiaole/ZITS_inpainting). Thanks for their great implementaion!
 
-# Stars and Forked
 [![Stargazers repo roster for @AlonzoLeeeooo/SketchRefiner](https://reporoster.com/stars/dark/AlonzoLeeeooo/SketchRefiner)](https://github.com/AlonzoLeeeooo/SketchRefiner/stargazers)
 
 [![Forkers repo roster for @AlonzoLeeeooo/SketchRefiner](https://reporoster.com/forks/dark/AlonzoLeeeooo/SketchRefiner)](https://github.com/AlonzoLeeeooo/SketchRefiner/network/members)
+
+<p align="center">
+    <a href="https://api.star-history.com/svg?repos=AlonzoLeeeooo/SketchRefiner&type=Date" target="_blank">
+        <img width="500" src="https://api.star-history.com/svg?repos=AlonzoLeeeooo/SketchRefiner&type=Date" alt="Star History Chart">
+    </a>
+<p>
