@@ -6,6 +6,10 @@ The official code implementation of "Towards Interactive Image Inpainting via Sk
 
 *(The password to download the real-world test protocol: rwtp)*
 
+# 🔥News
+- [May 17th] Our paper titled ["Towards Interactive Image Inpainting via Robust Sketch Refinement"](https://ieeexplore.ieee.org/document/10533842) is accepted by TMM 2024! 
+
+
 # Citation
 If you find our work is enlightening or the proposed dataset is useful to you, please cite our paper.
 ```tex
