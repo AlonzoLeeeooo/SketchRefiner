@@ -11,15 +11,14 @@ The official code implementation of "Towards Interactive Image Inpainting via Sk
 
 
 # Citation
-If you find our work is enlightening or the proposed dataset is useful to you, please cite our paper.
+If you find our work is enlightening or the proposed dataset is useful to you, please cite our TMM 2024 paper.
 ```tex
-@misc{liu2023interactive,
-      title={Towards Interactive Image Inpainting via Sketch Refinement}, 
-      author={Chang Liu and Shunxin Xu and Jialun Peng and Kaidong Zhang and Dong Liu},
-      year={2023},
-      eprint={2306.00407},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@ARTICLE{liu-etal-2024-sketchrefiner,
+  author={Liu, Chang and Xu, Shunxin and Peng, Jialun and Zhang, Kaidong and Liu, Dong},
+  journal={IEEE Transactions on Multimedia}, 
+  title={Towards Interactive Image Inpainting via Robust Sketch Refinement}, 
+  year={2024},
+  pages={1-15},
 }
 ```
 
