@@ -1,12 +1,17 @@
-<p align="center">
-  <h1 align="center">Towards Interactive Image Inpainting via Sketch Refinement</h1>
-The official code implementation of "Towards Interactive Image Inpainting via Sketch Refinement".
+<div align="center">
 
-[[Paper](https://arxiv.org/abs/2306.00407)] / [[Project](https://alonzoleeeooo.github.io/SketchRefiner/)] / [[Test Protocol](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw)] / [[Model Weights](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre)] / [Interactive Demo]
+# Towards Interactive Image Inpainting via Sketch Refinement
+
+Chang Liu, Shunxin Xu, Jialun Peng, Kaidong Zhang, Dong Liu
+
+[[`Paper`]](https://ieeexplore.ieee.org/abstract/document/10533842/) / [[`Project`]](https://alonzoleeeooo.github.io/SketchRefiner/) / [`Baidu Disk`] [(`Models`)](https://pan.baidu.com/s/1TAqqwHkjnBoDmfxMl0vl6Q?pwd=skre) [(`Test Protocol`)](https://pan.baidu.com/s/1avtBkYaOuxm36X-eoQERrw) / [[`Google Drive`]](https://drive.google.com/drive/folders/1xOeKO4f6tfco2AV0V_0EgJzYThOFb3kp?usp=drive_link) / [`Huggingface`] [(`Models`)](https://huggingface.co/AlonzoLeeeooo/SketchRefiner) [(`Test Protocol`)](https://huggingface.co/datasets/AlonzoLeeeooo/sketchrefiner-real-world-test-protocol) / [`Interactive Demo`]
+</div>
+
 
 *(The password to download the real-world test protocol: rwtp)*
 
 # 🔥News
+- [Aug. 7th] We are currently modifying the current codebase (ICCV version) to the corresponding version of our accepted paper (TMM version). Code will be progressively updated in near future.
 - [May 17th] Our paper titled ["Towards Interactive Image Inpainting via Robust Sketch Refinement"](https://ieeexplore.ieee.org/document/10533842) is accepted by TMM 2024! 
 
 
