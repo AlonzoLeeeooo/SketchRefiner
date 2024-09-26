@@ -7,14 +7,14 @@ def parse_args():
 
     # data configuration
     ## training data
-    parser.add_argument('--images', type=str, default='', help='path of input sketches')
+    parser.add_argument('--images', type=str, default='', help='path of ground truth images')
     parser.add_argument('--edges_prefix', type=str, default='', help='path prefix of input edges')
     parser.add_argument('--output', type=str, default='', help='path of output')
     parser.add_argument('--max_move_lower_bound', type=int, default=30, help='lower bound of the randomize interval of deforming algorithm')
     parser.add_argument('--max_move_upper_bound', type=int, default=100, help='upper bound of the randomize interval of deforming algorithm')
 
     ## validation data
-    parser.add_argument('--images_val', type=str, default='', help='path of input sketches for validation')
+    parser.add_argument('--images_val', type=str, default='', help='path of ground truth images for validation')
     parser.add_argument('--masks_val', type=str, default='', help='path of free-form masks for validation')
     parser.add_argument('--sketches_prefix_val', type=str, default='', help='path prefix of deformed sketches for validation')
     parser.add_argument('--edges_prefix_val', type=str, default='', help='path prefix of edges for validation')
