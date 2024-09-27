@@ -255,7 +255,7 @@ Instead, we offer a `Python 3` version of implementation in [this repo](https://
 
 If you have any questions about the usage of configurations arguments wrapped in `argparse`, please do not hesitate to discuss with us in the following issues, or [start a new issue](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/new).
 
-> Related issues: [#4](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/4), [#5](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/5), [#9](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/9)
+> Related issues: [#4](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/4), [#5](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/5), [#9](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/9), [#10](https://github.com/AlonzoLeeeooo/SketchRefiner/issues/10)
 
 [<u><small><🎯Back to Table of Contents></small></u>](#table-of-contents)
 
